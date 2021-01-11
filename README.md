@@ -5,4 +5,4 @@
 
 ## Screenshots of the App
 
-<img src="ScreenShots/Image1.jpeg" width="250"> <img src="ScreenShots/Image2.jpeg" width="250">
+<img src="ScreenShots/Image1.png" width="250"> <img src="ScreenShots/Image2.png" width="250">
