@@ -8,22 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		DC091D2F25AC788A005402D6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC091D2E25AC788A005402D6 /* AppDelegate.swift */; };
-		DC091D3125AC788A005402D6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC091D3025AC788A005402D6 /* SceneDelegate.swift */; };
 		DC091D3325AC788A005402D6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC091D3225AC788A005402D6 /* ViewController.swift */; };
 		DC091D3625AC788A005402D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC091D3425AC788A005402D6 /* Main.storyboard */; };
 		DC091D3825AC788D005402D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC091D3725AC788D005402D6 /* Assets.xcassets */; };
 		DC091D3B25AC788D005402D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC091D3925AC788D005402D6 /* LaunchScreen.storyboard */; };
+		DC091D4825AC9B99005402D6 /* ContactPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC091D4725AC9B99005402D6 /* ContactPickerView.swift */; };
+		DCC365ED25AC9DD600E64811 /* ContactPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC365EC25AC9DD600E64811 /* ContactPickerViewDelegate.swift */; };
+		DCC3660A25ACA33700E64811 /* UIApplication+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC3660925ACA33700E64811 /* UIApplication+Extention.swift */; };
+		DCC3660F25ACA93500E64811 /* ContactPickerViewInnerImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC3660E25ACA93500E64811 /* ContactPickerViewInnerImplementation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DC091D2B25AC788A005402D6 /* Contact Picker POC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contact Picker POC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC091D2E25AC788A005402D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC091D3025AC788A005402D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DC091D3225AC788A005402D6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC091D3525AC788A005402D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC091D3725AC788D005402D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC091D3A25AC788D005402D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC091D3C25AC788D005402D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC091D4725AC9B99005402D6 /* ContactPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerView.swift; sourceTree = "<group>"; };
+		DCC365EC25AC9DD600E64811 /* ContactPickerViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerViewDelegate.swift; sourceTree = "<group>"; };
+		DCC3660925ACA33700E64811 /* UIApplication+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extention.swift"; sourceTree = "<group>"; };
+		DCC3660E25ACA93500E64811 /* ContactPickerViewInnerImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactPickerViewInnerImplementation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +63,49 @@
 			isa = PBXGroup;
 			children = (
 				DC091D2E25AC788A005402D6 /* AppDelegate.swift */,
-				DC091D3025AC788A005402D6 /* SceneDelegate.swift */,
 				DC091D3225AC788A005402D6 /* ViewController.swift */,
+				DC091D4425AC9B75005402D6 /* PickerView */,
 				DC091D3425AC788A005402D6 /* Main.storyboard */,
 				DC091D3725AC788D005402D6 /* Assets.xcassets */,
 				DC091D3925AC788D005402D6 /* LaunchScreen.storyboard */,
 				DC091D3C25AC788D005402D6 /* Info.plist */,
 			);
 			path = "Contact Picker POC";
+			sourceTree = "<group>";
+		};
+		DC091D4425AC9B75005402D6 /* PickerView */ = {
+			isa = PBXGroup;
+			children = (
+				DC091D4525AC9B8B005402D6 /* Core */,
+				DC091D4625AC9B90005402D6 /* Models */,
+				DCC3660825ACA32700E64811 /* Extentions */,
+			);
+			path = PickerView;
+			sourceTree = "<group>";
+		};
+		DC091D4525AC9B8B005402D6 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DC091D4725AC9B99005402D6 /* ContactPickerView.swift */,
+				DCC3660E25ACA93500E64811 /* ContactPickerViewInnerImplementation.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DC091D4625AC9B90005402D6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DCC365EC25AC9DD600E64811 /* ContactPickerViewDelegate.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DCC3660825ACA32700E64811 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				DCC3660925ACA33700E64811 /* UIApplication+Extention.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +178,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC3660A25ACA33700E64811 /* UIApplication+Extention.swift in Sources */,
 				DC091D3325AC788A005402D6 /* ViewController.swift in Sources */,
+				DCC3660F25ACA93500E64811 /* ContactPickerViewInnerImplementation.swift in Sources */,
 				DC091D2F25AC788A005402D6 /* AppDelegate.swift in Sources */,
-				DC091D3125AC788A005402D6 /* SceneDelegate.swift in Sources */,
+				DCC365ED25AC9DD600E64811 /* ContactPickerViewDelegate.swift in Sources */,
+				DC091D4825AC9B99005402D6 /* ContactPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
